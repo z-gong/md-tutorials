@@ -1,13 +1,13 @@
 ## 1. Download and install Anaconda Python environment. 
-Anaconda is a great Python package manager, which allows you to access all kinds of scientific packages easily with several lines of commands. 
+Anaconda is a great Python package manager, which allows you to access all kinds of scientific packages easily with several lines of commands. You can download it from its official website
 https://www.anaconda.com/products/individual
 
-After the installation, open your Terminal (Mac) or Anaconda Prompt (Windows), you should notice that `(base)` will be shown at the beginning of the prompt. 
+After the installation, open your `Terminal` (Mac) or `Anaconda Prompt` (Windows), you should notice that `(base)` will be shown at the beginning of the prompt. 
 Run the following command to make sure that you are actually using the Python from Anaconda. 
 ```
 python -c "import sys; print(sys.executable)"
 ```
-It will output the path of python, something similar like this
+It will output the path of python, something similar to this
 ```
 C:\Users\zheng\Anaconda3\python.exe
 ```
@@ -18,7 +18,7 @@ OpenMM is not officially maintained by Anaconda, therefore you have to add `cond
 ```
 conda config --append channels conda-forge
 ```
-Then run the following command to show currently used repositories.
+Then run the following command to show the repositories currently in use
 ```
 conda config --show channels
 ```
@@ -29,15 +29,15 @@ channels:
   - conda-forge
 ```
 
-## 3. Install OpenMM packages
-Now that the Python environment been setup, it's time to install OpenMM and it's dependencies, with the following two commands
+## 3. Install OpenMM and other packages
+Now that the Python environment been setup, it's time to install OpenMM and its dependencies, with the following two commands
 ```
 conda install numpy matplotlib jupyter openmm mdtraj nglview
 
 jupyter-nbextension enable nglview --py --sys-prefix
 ```
 
-The last step is to validate that OpenMM is successfully installed with the following command
+The last step is to validate that OpenMM is successfully installed. Just execute the following command
 ```
 python -m simtk.testInstallation
 ```
@@ -61,4 +61,4 @@ CPU vs. OpenCL: 7.99175e-07
 
 All differences are within tolerance.
 ```
-The output will be different based on your hardware and graphical drivers. However, make sure __at least one of the `CPU`, `CUDA` and `OpenCL`__ are listed and have sucessfully computed forces.
+The output will be different based on your hardware and graphical drivers. However, make sure __at least one of the `CPU`, `CUDA` and `OpenCL`__ is listed and have successfully computed forces.
